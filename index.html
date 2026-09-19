@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>ADG3 — Three Minds. One Brand.</title>
+<meta name="description" content="ADG3 — a streetwear brand built by three friends: Danny, Andrew and Gael.">
+<style>
+:root{--bg:#080808;--card:#111;--text:#f5f5f5;--muted:#aaa;--line:#242424}
+*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:var(--bg);color:var(--text);font-family:Arial,Helvetica,sans-serif}
+a{color:inherit;text-decoration:none}button{font:inherit;cursor:pointer}
+header{position:sticky;top:0;z-index:10;background:rgba(8,8,8,.92);backdrop-filter:blur(10px);border-bottom:1px solid var(--line)}
+.nav{max-width:1200px;margin:auto;padding:18px 24px;display:flex;align-items:center;justify-content:space-between}
+.logo{font-weight:900;letter-spacing:-2px;font-size:27px}.navlinks{display:flex;gap:25px;font-size:14px;text-transform:uppercase;letter-spacing:1px}.cart{border:1px solid #444;padding:9px 13px;border-radius:99px}
+.hero{min-height:82vh;display:grid;place-items:center;text-align:center;padding:80px 20px;border-bottom:1px solid var(--line)}
+.hero h1{font-size:clamp(70px,16vw,190px);line-height:.8;margin:0;font-weight:950;letter-spacing:-9px}.hero p{font-size:15px;letter-spacing:4px;color:var(--muted);margin:30px 0;text-transform:uppercase}
+.btn{display:inline-block;background:#fff;color:#000;padding:15px 24px;border-radius:3px;font-weight:800;text-transform:uppercase;letter-spacing:1px;border:0}
+section{max-width:1200px;margin:auto;padding:85px 24px}.section-title{display:flex;justify-content:space-between;align-items:end;margin-bottom:30px}.section-title h2{font-size:38px;margin:0;letter-spacing:-2px}.section-title span{color:var(--muted);font-size:13px}
+.grid{display:grid;grid-template-columns:repeat(4,1fr);gap:16px}.product{background:var(--card);border:1px solid var(--line);overflow:hidden}.photo{aspect-ratio:1/1.15;background:linear-gradient(135deg,#202020,#0d0d0d);display:grid;place-items:center;color:#777;font-weight:800;letter-spacing:2px}.info{padding:16px}.info h3{margin:0 0 7px;font-size:16px}.price{color:#bbb;font-size:14px}.add{margin-top:13px;width:100%;padding:11px;background:#fff;color:#000;border:0;font-weight:800}
+.about{border-top:1px solid var(--line);border-bottom:1px solid var(--line);text-align:center}.about h2{font-size:50px;margin:0 0 18px;letter-spacing:-3px}.about p{max-width:650px;margin:auto;color:#aaa;line-height:1.7}
+footer{padding:45px 24px;text-align:center;color:#777;font-size:13px;border-top:1px solid var(--line)}
+.toast{position:fixed;right:20px;bottom:20px;background:#fff;color:#000;padding:14px 18px;border-radius:6px;font-weight:700;transform:translateY(120px);transition:.25s;z-index:20}.toast.show{transform:translateY(0)}
+@media(max-width:800px){.grid{grid-template-columns:repeat(2,1fr)}.navlinks{display:none}.hero h1{letter-spacing:-5px}.about h2{font-size:38px}}
+@media(max-width:480px){section{padding:60px 16px}.grid{gap:10px}.hero{min-height:75vh}.info{padding:12px}.add{font-size:12px}}
+</style>
+<link rel="manifest" href="manifest.webmanifest"><meta name="theme-color" content="#080808"><meta name="apple-mobile-web-app-capable" content="yes"><meta name="apple-mobile-web-app-status-bar-style" content="black"><link rel="apple-touch-icon" href="icon-192.svg"></head>
+<body>
+<header>
+  <nav class="nav">
+    <a class="logo" href="#">ADG3</a>
+    <div class="navlinks"><a href="#shop">Shop</a><a href="#about">About</a><a href="#contact">Contact</a></div>
+    <button class="cart" id="cartBtn">Cart (<span id="count">0</span>)</button>
+  </nav>
+</header>
+
+<main>
+<section class="hero">
+  <div>
+    <h1>ADG3</h1>
+    <p>Three minds. One brand.</p>
+    <a class="btn" href="#shop">Shop the drop</a>
+  </div>
+</section>
+
+<section id="shop">
+  <div class="section-title"><h2>DROP 001</h2><span>FIRST COLLECTION</span></div>
+  <div class="grid">
+    <article class="product">
+      <div class="photo">ADG3 TEE</div><div class="info"><h3>ADG3 Heavyweight Tee</h3><div class="price">$30.00</div><button class="add" data-name="ADG3 Heavyweight Tee" data-price="30">Add to cart</button></div>
+    </article>
+    <article class="product">
+      <div class="photo">ADG3 HOODIE</div><div class="info"><h3>ADG3 Essential Hoodie</h3><div class="price">$60.00</div><button class="add" data-name="ADG3 Essential Hoodie" data-price="60">Add to cart</button></div>
+    </article>
+    <article class="product">
+      <div class="photo">ADG3 PANTS</div><div class="info"><h3>ADG3 Heavyweight Pants</h3><div class="price">$50.00</div><button class="add" data-name="ADG3 Heavyweight Pants" data-price="50">Add to cart</button></div>
+    </article>
+    <article class="product">
+      <div class="photo">ADG3 CAP</div><div class="info"><h3>ADG3 Trucker Cap</h3><div class="price">$25.00</div><button class="add" data-name="ADG3 Trucker Cap" data-price="25">Add to cart</button></div>
+    </article>
+  </div>
+</section>
+
+<section id="about" class="about">
+  <h2>BUILT TOGETHER.</h2>
+  <p>ADG3 was started by three friends — Danny, Andrew and Gael. The 3 represents the people behind the brand. This is our first collection, and we're building it from the ground up.</p>
+</section>
+
+<section id="contact">
+  <div class="section-title"><h2>CONTACT</h2><span>ADG3</span></div>
+  <p style="color:#aaa">Email: <strong style="color:#fff">your-email@example.com</strong></p>
+  <p style="color:#666;font-size:13px">Replace this email with your real business email before publishing.</p>
+</section>
+</main>
+
+<footer>© 2026 ADG3. Three minds. One brand.</footer>
+<div class="toast" id="toast">Added to cart</div>
+
+<script>
+let count=0, items=[];
+const countEl=document.getElementById('count'), toast=document.getElementById('toast');
+document.querySelectorAll('.add').forEach(btn=>{
+  btn.addEventListener('click',()=>{
+    count++; items.push({name:btn.dataset.name,price:Number(btn.dataset.price)});
+    countEl.textContent=count; toast.textContent=btn.dataset.name+' added to cart'; toast.classList.add('show');
+    setTimeout(()=>toast.classList.remove('show'),1400);
+  });
+});
+document.getElementById('cartBtn').addEventListener('click',()=>{
+  if(!items.length){alert('Your cart is empty.');return}
+  const total=items.reduce((s,x)=>s+x.price,0);
+  alert('ADG3 Cart\\n\\n'+items.map(x=>x.name+' — $'+x.price.toFixed(2)).join('\\n')+'\\n\\nTotal: $'+total.toFixed(2)+'\\n\\nCheckout will be connected when you choose your payment/store platform.');
+});
+</script>
+<script>if("serviceWorker" in navigator){navigator.serviceWorker.register("./sw.js").catch(()=>{});}</script></body>
+</html>

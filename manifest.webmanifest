@@ -1,0 +1,23 @@
+{
+  "name": "ADG3 \u2014 Three Minds. One Brand.",
+  "short_name": "ADG3",
+  "start_url": "./",
+  "display": "standalone",
+  "background_color": "#080808",
+  "theme_color": "#080808",
+  "description": "ADG3 streetwear \u2014 built by Danny, Andrew and Gael.",
+  "icons": [
+    {
+      "src": "icon-192.svg",
+      "sizes": "192x192",
+      "type": "image/svg+xml",
+      "purpose": "any maskable"
+    },
+    {
+      "src": "icon-512.svg",
+      "sizes": "512x512",
+      "type": "image/svg+xml",
+      "purpose": "any maskable"
+    }
+  ]
+}
